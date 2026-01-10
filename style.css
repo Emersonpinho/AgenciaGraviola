@@ -64,6 +64,24 @@ h3,
     font-family: 'Outfit', sans-serif;
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -98,6 +116,12 @@ span {
     background-clip: text;
     animation: text-flash 3s linear infinite;
     display: inline-block;
+}
+
+@keyframes text-flash {
+    to {
+        background-position: 200% center;
+    }
 }
 
 /* Navbar */
@@ -281,7 +305,7 @@ span {
 
 .floating-mascot {
     width: 100%;
-    max-width: 450px;
+    max-width: 250px;
     filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
     animation: float 6s ease-in-out infinite;
     transition: var(--transition);
@@ -357,7 +381,16 @@ body.light-mode .floating-mascot {
 .service-card:hover {
     background: rgba(16, 185, 129, 0.05);
     border-color: var(--primary);
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.2);
+}
+
+.service-card i {
+    transition: var(--transition);
+}
+
+.service-card:hover i {
+    transform: scale(1.2) rotate(5deg);
 }
 
 /* About Section */
@@ -455,6 +488,24 @@ body.light-mode .floating-mascot {
     box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
 }
 
+.btn-whatsapp {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
 /* Footer */
 footer {
     padding: 4rem 0;
@@ -497,6 +548,19 @@ body.light-mode .footer-logo span {
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Staggered Reveals */
+.services-grid .reveal:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.services-grid .reveal:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+.services-grid .reveal:nth-child(3) {
+    transition-delay: 0.5s;
 }
 
 @keyframes text-flash {
@@ -653,6 +717,6 @@ body.light-mode .footer-logo span {
     }
 
     .floating-mascot {
-        max-width: 300px;
+        max-width: 200px;
     }
 }
