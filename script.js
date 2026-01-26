@@ -35,6 +35,17 @@ window.addEventListener('load', () => {
     });
 });
 
+// Parallax effect on mouse move
+document.addEventListener('mousemove', (e) => {
+    const elements = document.querySelectorAll('.floating-element');
+    elements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / 10;
+        const y = (e.clientY - rect.top) / 10;
+        el.style.transform = `perspective(1000px) rotateX(${y}deg) rotateY(${x}deg)`;
+    });
+});
+
 // Theme Selection
 const themeToggle = document.getElementById('theme-toggle');
 const menuToggle = document.querySelector('.mobile-menu-toggle');
@@ -88,5 +99,19 @@ document.querySelectorAll('.nav-links a').forEach(link => {
             menuToggle.querySelector('i').classList.remove('fa-times');
         }
         body.style.overflow = '';
+    });
+});
+
+// Smooth scroll animations for buttons
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     });
 });
