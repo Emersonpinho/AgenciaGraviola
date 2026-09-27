@@ -35,14 +35,16 @@ window.addEventListener('load', () => {
     });
 });
 
-// Parallax effect on mouse move
+// Subtle parallax on floating elements (no rotation, just soft position)
 document.addEventListener('mousemove', (e) => {
     const elements = document.querySelectorAll('.floating-element');
-    elements.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / 10;
-        const y = (e.clientY - rect.top) / 10;
-        el.style.transform = `perspective(1000px) rotateX(${y}deg) rotateY(${x}deg)`;
+    const cx = window.innerWidth / 2;
+    const cy = window.innerHeight / 2;
+    elements.forEach((el, i) => {
+        const factor = (i + 1) * 4;
+        const x = (e.clientX - cx) / factor;
+        const y = (e.clientY - cy) / factor;
+        el.style.transform = `translate(${x}px, ${y}px)`;
     });
 });
 
@@ -55,28 +57,33 @@ const themeIcon = themeToggle.querySelector('i');
 const navLogo = document.querySelector('.nav-logo-img');
 const mascot = document.querySelector('.floating-mascot');
 
-// Check for saved theme
+// Theme Toggle — padrão: claro. dark-mode = escuro.
 const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'light') {
-    body.classList.add('light-mode');
+if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+    themeIcon.className = 'fas fa-sun';
+    if (navLogo) navLogo.src = 'assets/AgenciaGraviolaLogo.png';
+    if (mascot) mascot.src = 'assets/AgenciaGraviolaLogo.png';
+} else {
+    // Garante logo preta no modo claro (padrão ou explícito)
     themeIcon.className = 'fas fa-moon';
     if (navLogo) navLogo.src = 'assets/logoPreta.png';
     if (mascot) mascot.src = 'assets/logoPreta.png';
 }
 
 themeToggle.addEventListener('click', () => {
-    body.classList.toggle('light-mode');
+    body.classList.toggle('dark-mode');
 
-    if (body.classList.contains('light-mode')) {
-        localStorage.setItem('theme', 'light');
-        themeIcon.className = 'fas fa-moon';
-        if (navLogo) navLogo.src = 'assets/logoPreta.png';
-        if (mascot) mascot.src = 'assets/logoPreta.png';
-    } else {
+    if (body.classList.contains('dark-mode')) {
         localStorage.setItem('theme', 'dark');
         themeIcon.className = 'fas fa-sun';
         if (navLogo) navLogo.src = 'assets/AgenciaGraviolaLogo.png';
         if (mascot) mascot.src = 'assets/AgenciaGraviolaLogo.png';
+    } else {
+        localStorage.setItem('theme', 'light');
+        themeIcon.className = 'fas fa-moon';
+        if (navLogo) navLogo.src = 'assets/logoPreta.png';
+        if (mascot) mascot.src = 'assets/logoPreta.png';
     }
 });
 
