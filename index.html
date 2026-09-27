@@ -4,229 +4,486 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agência Graviola | Criamos Sites Incríveis</title>
+    <title>Agência Graviola | Sites de Alta Conversão & Design Exclusivo</title>
+    <meta name="description" content="Criamos sites ultra rápidos, landing pages de alta conversão e design autoral. Do Nordeste para todo o Brasil. Peça seu orçamento!">
     <link rel="icon" type="image/png" href="assets/AgenciaGraviolaLogo.png">
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="navbar">
+    <!-- Top Announcement Bar -->
+    <div class="top-announcement">
+        <div class="container announcement-content">
+            <span class="pulse-dot"></span>
+            <span>Vagas abertas para novos projetos este mês • Atendimento prioritário</span>
+            <a href="https://wa.me/5583998207363?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Graviola%20e%20quero%20um%20or%C3%A7amento." target="_blank" class="announcement-link">
+                Falar com especialista <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
         <div class="container nav-container">
-            <div class="logo">
-                <img src="assets/logoPreta.png" alt="Agência Graviola Logo" class="nav-logo-img">
-                <span class="logo-text">Graviola</span>
-            </div>
-            <button class="mobile-menu-toggle" aria-label="Abrir Menu">
+            <a href="#home" class="logo" aria-label="Agência Graviola">
+                <div class="logo-icon-wrap">
+                    <img src="assets/logoGraviolaEscura.png" alt="Graviola Logo" class="nav-logo-img" id="navLogo">
+                </div>
+                <div class="logo-text-group">
+                    <span class="logo-brand">Graviola</span>
+                    <span class="logo-tagline">Agência Digital</span>
+                </div>
+            </a>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir Menu">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul class="nav-links">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#sobre">Sobre Noś</a></li>
-                <li><button id="theme-toggle" class="theme-toggle" aria-label="Alternar Tema">
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-item">Início</a></li>
+                <li><a href="#servicos" class="nav-item">Serviços</a></li>
+                <li><a href="#cases" class="nav-item">Cases</a></li>
+                <li><a href="#diferenciais" class="nav-item">Diferenciais</a></li>
+                <li><a href="#depoimentos" class="nav-item">Depoimentos</a></li>
+                <li><a href="#sobre" class="nav-item">Sobre Nós</a></li>
+                <li class="nav-action-group">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar Tema" title="Mudar tema">
                         <i class="fas fa-moon"></i>
-                    </button></li>
-                <li><a href="#contato" class="btn-cta">Fale Conosco</a></li>
+                    </button>
+                    <a href="https://wa.me/5583998207363?text=Ol%C3%A1!%20Quero%20fazer%20um%20or%C3%A7amento%20para%20minha%20empresa." target="_blank" class="btn-cta-nav">
+                        <span>Fale Conosco</span>
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
 
     <main>
+        <!-- Hero Section -->
         <section id="home" class="hero">
-            <div class="hero-bg-glow"></div>
+            <div class="hero-glow-bg"></div>
+            <div class="hero-grid-pattern"></div>
+            
             <div class="container hero-container">
                 <div class="hero-content">
-                    <div class="tag reveal"><i class="fas fa-leaf"></i> Agência do Nordeste</div>
-                    <h1 class="reveal">Sua marca com sabor <span class="flash-text">único</span></h1>
-                    <p class="reveal">Sites, design e vídeos feitos com cuidado. Do nordeste para todo o Brasil.</p>
-                    <div class="hero-btns reveal">
-                        <a href="#contato" class="btn-primary">Vamos conversar</a>
-                        <a href="#servicos" class="btn-secondary">Ver Serviços</a>
+                    <div class="badge-pill reveal">
+                        <span class="badge-icon"><i class="fas fa-sparkles"></i></span>
+                        <span class="badge-text">Do Nordeste para todo o Brasil</span>
+                        <span class="badge-chevron"><i class="fas fa-chevron-right"></i></span>
+                    </div>
+
+                    <h1 class="hero-title reveal">
+                        Sua marca com presença digital <span class="gradient-text">única e de alto valor.</span>
+                    </h1>
+
+                    <p class="hero-subtitle reveal">
+                        Criamos sites profissionais, landing pages de alta conversão e experiências visuais marcantes. 
+                        Design estratégico aliado a código puro e carregamento instantâneo.
+                    </p>
+
+                    <div class="hero-actions reveal">
+                        <a href="https://wa.me/5583998207363?text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20site!" target="_blank" class="btn-primary-glow">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Pedir Orçamento Grátis</span>
+                            <i class="fas fa-arrow-right btn-arrow"></i>
+                        </a>
+                        <a href="#servicos" class="btn-secondary-glass">
+                            <span>Explorar Serviços</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </a>
+                    </div>
+
+                    <div class="hero-proof reveal">
+                        <div class="rating-group">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-val">4.9 / 5.0</span>
+                        </div>
+                        <span class="proof-divider"></span>
+                        <p class="proof-text">Mais de <strong>30+ empresas</strong> e infoprodutores atendidos com sucesso.</p>
                     </div>
                 </div>
-                <div class="hero-image reveal">
-                    <img src="assets/logoPreta.png" alt="Mascote Graviola" class="floating-mascot">
+
+                <div class="hero-visual reveal">
+                    <!-- Interactive 3D Device Card Mockup -->
+                    <div class="device-card-mockup">
+                        <div class="mockup-header">
+                            <div class="browser-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="browser-address">
+                                <i class="fas fa-lock"></i>
+                                <span>agenciagraviola.online</span>
+                            </div>
+                            <div class="browser-action">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                        </div>
+
+                        <div class="mockup-screen">
+                            <div class="screen-hero-preview">
+                                <div class="mascot-emblem-wrap">
+                                    <div class="mascot-halo"></div>
+                                    <img src="assets/logoGraviolaEscura.png" alt="Graviola" class="screen-mascot-img" id="heroMascot">
+                                </div>
+                                <div class="screen-badge">
+                                    <span class="badge-status"></span>
+                                    <span>Site em Alta Performance</span>
+                                </div>
+                                <h3>Design que Converte</h3>
+                                <p>Estrutura pensada para atrair, reter e transformar visitantes em clientes reais.</p>
+                            </div>
+
+                            <div class="screen-metrics-grid">
+                                <div class="metric-card">
+                                    <span class="metric-label">Google PageSpeed</span>
+                                    <div class="metric-val text-green">
+                                        <i class="fas fa-bolt"></i> 99/100
+                                    </div>
+                                </div>
+                                <div class="metric-card">
+                                    <span class="metric-label">Taxa de Conversão</span>
+                                    <div class="metric-val text-purple">
+                                        <i class="fas fa-chart-line"></i> +240%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badges on Mockup -->
+                        <div class="floating-badge badge-top-right">
+                            <div class="fb-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="fb-info">
+                                <strong>100% Responsivo</strong>
+                                <span>Perfeito no Celular</span>
+                            </div>
+                        </div>
+
+                        <div class="floating-badge badge-bottom-left">
+                            <div class="fb-icon whatsapp-bg"><i class="fab fa-whatsapp"></i></div>
+                            <div class="fb-info">
+                                <strong>Lead Recebido!</strong>
+                                <span>Direto no seu WhatsApp</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Authority / Metrics Bar -->
+        <section class="metrics-bar">
+            <div class="container">
+                <div class="metrics-grid">
+                    <div class="metric-item reveal">
+                        <div class="metric-icon-box"><i class="fas fa-chart-pie"></i></div>
+                        <div class="metric-data">
+                            <h3>+R$ 1.5M</h3>
+                            <p>Gerados em vendas pelos nossos clientes</p>
+                        </div>
+                    </div>
+                    <div class="metric-item reveal">
+                        <div class="metric-icon-box"><i class="fas fa-tachometer-alt"></i></div>
+                        <div class="metric-data">
+                            <h3>&lt; 1 Segundo</h3>
+                            <p>Tempo médio de carregamento dos sites</p>
+                        </div>
+                    </div>
+                    <div class="metric-item reveal">
+                        <div class="metric-icon-box"><i class="fas fa-award"></i></div>
+                        <div class="metric-data">
+                            <h3>100% Autoral</h3>
+                            <p>Zero templates genéricos ou pirateados</p>
+                        </div>
+                    </div>
+                    <div class="metric-item reveal">
+                        <div class="metric-icon-box"><i class="fas fa-headset"></i></div>
+                        <div class="metric-data">
+                            <h3>Suporte Dedicado</h3>
+                            <p>Acompanhamento direto após o lançamento</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section (Bento Grid) -->
         <section id="servicos" class="services">
             <div class="container">
                 <div class="section-header">
-                    <div class="tag reveal">Serviços</div>
-                    <h2 class="reveal">O que fazemos</h2>
-                    <p class="reveal">Sites e design pensados para ajudar o seu negócio a vender pela internet.</p>
+                    <div class="section-tag reveal"><i class="fas fa-cubes"></i> Nossos Serviços</div>
+                    <h2 class="section-title reveal">O que construímos para sua empresa acelerar</h2>
+                    <p class="section-desc reveal">Páginas modernas, sistemas eficientes e identidade visual pensados estrategicamente para o seu negócio faturar mais.</p>
                 </div>
-                <div class="services-grid">
-                    <div class="service-card reveal card-hover-lift">
-                        <div class="service-icon-wrapper">
-                            <i class="fas fa-laptop-code"></i>
+
+                <div class="bento-grid">
+                    <!-- Bento Item 1: Large Featured -->
+                    <div class="bento-card featured reveal">
+                        <div class="bento-badge">Mais Procurado</div>
+                        <div class="bento-icon-wrap"><i class="fas fa-bullseye"></i></div>
+                        <div class="bento-body">
+                            <h3>Landing Pages de Alta Conversão</h3>
+                            <p>Projetadas meticulosamente para converter cliques em dinheiro. Ideais para campanhas no Meta Ads, Google Ads e lançamentos rápidos.</p>
+                            
+                            <ul class="bento-features">
+                                <li><i class="fas fa-check"></i> Copywriting estruturado para persuasão e retenção</li>
+                                <li><i class="fas fa-check"></i> Carregamento ultrarrápido para não perder nenhum clique pago</li>
+                                <li><i class="fas fa-check"></i> Integração direta com Pixel, Google Analytics e WhatsApp</li>
+                            </ul>
+                            
+                            <a href="https://wa.me/5583998207363?text=Ol%C3%A1!%20Quero%20uma%20Landing%20Page%20de%20alta%20convers%C3%A3o." target="_blank" class="bento-link">
+                                Quero minha Landing Page <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
-                        <h3>Landing Pages</h3>
-                        <p>Sites focados em conversão e vendas para o seu produto.</p>
-                        <div class="card-gradient"></div>
                     </div>
-                    <div class="service-card reveal card-hover-lift">
-                        <div class="service-icon-wrapper">
-                            <i class="fas fa-graduation-cap"></i>
+
+                    <!-- Bento Item 2 -->
+                    <div class="bento-card reveal">
+                        <div class="bento-icon-wrap"><i class="fas fa-laptop-code"></i></div>
+                        <div class="bento-body">
+                            <h3>Sites Institucionais de Alto Nível</h3>
+                            <p>Sua empresa vista com autoridade máxima. Transmita credibilidade imediata a clientes, investidores e parceiros.</p>
+                            <div class="tag-chips">
+                                <span>Design Exclusivo</span>
+                                <span>SEO Google</span>
+                                <span>Multi-páginas</span>
+                            </div>
                         </div>
-                        <h3>Sites para Cursos</h3>
-                        <p>Plataformas completas para vender e hospedar seus infoprodutos.</p>
-                        <div class="card-gradient"></div>
                     </div>
-                    <div class="service-card reveal card-hover-lift">
-                        <div class="service-icon-wrapper">
-                            <i class="fas fa-mobile-alt"></i>
+
+                    <!-- Bento Item 3 -->
+                    <div class="bento-card reveal">
+                        <div class="bento-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="bento-body">
+                            <h3>Páginas para Cursos & Infoprodutos</h3>
+                            <p>Estrutura pronta para infoprodutores, especialistas e mentorias. Integração com Hotmart, Kiwify e Eduzz.</p>
+                            <div class="tag-chips">
+                                <span>Checkout Seguro</span>
+                                <span>VSL Player</span>
+                                <span>Gatilhos de Escassez</span>
+                            </div>
                         </div>
-                        <h3>Sites Responsivos</h3>
-                        <p>Design que se adapta perfeitamente em qualquer dispositivo.</p>
-                        <div class="card-gradient"></div>
+                    </div>
+
+                    <!-- Bento Item 4 -->
+                    <div class="bento-card reveal">
+                        <div class="bento-icon-wrap"><i class="fas fa-mobile-screen-button"></i></div>
+                        <div class="bento-body">
+                            <h3>Redesign & Otimização de Performance</h3>
+                            <p>Seu site atual é lento, feio ou não abre direito no celular? Transformamos seu site antigo em uma referência moderna.</p>
+                            <div class="tag-chips">
+                                <span>Mobile-First</span>
+                                <span>100 PageSpeed</span>
+                                <span>Visual 2026</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="client-showcase">
+        <!-- Client Showcase (Agência Tozzo Case) -->
+        <section id="cases" class="client-showcase">
             <div class="container">
-                <div class="showcase-badge tag reveal">
-                    <i class="fas fa-star"></i>
-                    <span>Cliente em destaque</span>
-                </div>
-                <div class="showcase-content reveal">
-                    <div class="showcase-text">
-                        <h2>Trabalho que <span class="highlight-text">fala por si</span></h2>
-                        <p class="showcase-description">Desenvolvemos o site da
-                            <strong>Agência Tozzo</strong>, produtora de cartazes e cursos com mais de 7.700 seguidores e
-                            mais de 1.000 alunos.
+                <div class="showcase-card reveal">
+                    <div class="showcase-info">
+                        <div class="showcase-pill">
+                            <i class="fas fa-crown"></i>
+                            <span>Case em Destaque</span>
+                        </div>
+                        <h2>Trabalho que gera <span class="gradient-text">reconhecimento real</span></h2>
+                        <p class="showcase-lead">
+                            Desenvolvemos a presença online da <strong>Agência Tozzo</strong>, referência nacional em design, cartazes e cursos com milhares de profissionais capacitados.
                         </p>
-                        <div class="client-stats">
-                            <div class="stat-box reveal">
-                                <div class="stat-number">7.759</div>
-                                <div class="stat-label">Seguidores</div>
+
+                        <div class="showcase-stats-row">
+                            <div class="sc-stat">
+                                <div class="sc-number">+7.750</div>
+                                <div class="sc-label">Seguidores no Instagram</div>
                             </div>
-                            <div class="stat-box reveal">
-                                <div class="stat-number">+1000</div>
-                                <div class="stat-label">Clientes Satisfeitos</div>
+                            <div class="sc-stat">
+                                <div class="sc-number">+1.000</div>
+                                <div class="sc-label">Alunos Impactados</div>
+                            </div>
+                            <div class="sc-stat">
+                                <div class="sc-number">100%</div>
+                                <div class="sc-label">Satisfação no Projeto</div>
                             </div>
                         </div>
-                        <p class="trust-text"><i class="fas fa-shield-alt"></i> Se eles confiam no nosso trabalho, você também pode.</p>
+
+                        <blockquote class="showcase-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"A Graviola entendeu perfeitamente o nível estético que nossa marca exigia. O site ficou rápido, imponente e nos ajudou a consolidar autoridade."</p>
+                        </blockquote>
+
+                        <div class="showcase-cta">
+                            <a href="https://wa.me/5583998207363?text=Ol%C3%A1!%20Vi%20o%20case%20da%20Ag%C3%AAncia%20Tozzo%20e%20quero%20um%20projeto%20desse%20n%C3%ADvel." target="_blank" class="btn-primary-glow">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Quero um projeto desse nível</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="showcase-logo reveal">
-                        <div class="logo-container">
-                            <img src="assets/agencia-tozzo-logo.png" alt="Agência Tozzo Logo" class="client-logo">
-                            <div class="logo-glow"></div>
+
+                    <div class="showcase-visual">
+                        <div class="showcase-logo-frame">
+                            <div class="frame-ambient-glow"></div>
+                            <img src="assets/agencia-tozzo-logo.png" alt="Agência Tozzo" class="showcase-client-img">
+                            <div class="verified-badge">
+                                <i class="fas fa-badge-check"></i>
+                                <span>Cliente Verificado</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="urgent-cta">
-            <div class="container">
-                <div class="urgent-content reveal pop-in">
-                    <div class="cta-emoji"><i class="fas fa-gem"></i></div>
-                    <h2>Quer um site que realmente vende?</h2>
-                    <p>Fale com a gente pelo WhatsApp e veja o que dá pra fazer pelo seu negócio.</p>
-                    <a href="https://wa.me/5583998207363" class="btn-urgent pulse-btn">Pedir orçamento <i
-                            class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-        </section>
-
-        <section class="motion-section">
-            <div class="container">
-                <div class="motion-content">
-                    <div class="motion-text">
-                        <div class="tag reveal">Diferenciais</div>
-                        <h2 class="reveal">Por que a Graviola?</h2>
-                        <p class="reveal">Cuidamos do seu site do começo ao fim: design, código e performance. Entregamos rápido e ficamos por perto depois que o projeto vai ao ar. Cada detalhe é pensado para que o site funcione de verdade e não só pareça bonito.</p>
-                        <div class="stats-grid">
-                            <div class="stat-item reveal">
-                                <div class="stat-icon"><i class="fas fa-handshake"></i></div>
-                                <h3>Parceiro</h3>
-                                <p>De Grandes Agências</p>
-                            </div>
-                            <div class="stat-item reveal">
-                                <div class="stat-icon"><i class="fas fa-bolt"></i></div>
-                                <h3>Impulso</h3>
-                                <p>Para o seu Negócio</p>
-                            </div>
-                            <div class="stat-item reveal">
-                                <div class="stat-icon"><i class="fas fa-headset"></i></div>
-                                <h3>24/7</h3>
-                                <p>Suporte Disponível</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="motion-visual reveal">
-                        <div class="floating-element element-1">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="floating-element element-2">
-                            <i class="fas fa-palette"></i>
-                        </div>
-                        <div class="floating-element element-3">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <div class="glow-orb orb-1"></div>
-                        <div class="glow-orb orb-2"></div>
-                        <div class="glow-orb orb-3"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="depoimentos" class="testimonials">
-            <div class="testimonials-bg-glow"></div>
+        <!-- Diferenciais Section -->
+        <section id="diferenciais" class="differentials">
             <div class="container">
                 <div class="section-header">
-                    <div class="tag reveal">Depoimentos</div>
-                    <h2 class="reveal">O que dizem sobre nós</h2>
-                    <p class="reveal">Quem já trabalhou com a gente conta como foi.</p>
+                    <div class="section-tag reveal"><i class="fas fa-fingerprint"></i> Por que a Graviola?</div>
+                    <h2 class="section-title reveal">O padrão de excelência que você não encontra em agências comuns</h2>
+                    <p class="section-desc reveal">Não entregamos apenas código. Entregamos uma experiência completa de posicionamento para o seu negócio.</p>
                 </div>
+
+                <div class="differentials-grid">
+                    <div class="diff-card reveal">
+                        <div class="diff-num">01</div>
+                        <div class="diff-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                        <h3>Design Exclusivo e Autoral</h3>
+                        <p>Cada linha de design é feita sob medida para a sua marca. Nada de templates repetitivos que fazem sua empresa parecer genérica.</p>
+                    </div>
+
+                    <div class="diff-card reveal">
+                        <div class="diff-num">02</div>
+                        <div class="diff-icon"><i class="fas fa-gauge-high"></i></div>
+                        <h3>Performance & Velocidade</h3>
+                        <p>Sites leves e ultrarrápidos que carregam em milissegundos no celular. Menor rejeição e melhor posicionamento no Google.</p>
+                    </div>
+
+                    <div class="diff-card reveal">
+                        <div class="diff-num">03</div>
+                        <div class="diff-icon"><i class="fas fa-funnel-dollar"></i></div>
+                        <h3>Foco Comercial em Vendas</h3>
+                        <p>Hierarquia visual, CTAs estratégicos e copywriting pensados para transformar tráfego em orçamentos no seu WhatsApp.</p>
+                    </div>
+
+                    <div class="diff-card reveal">
+                        <div class="diff-num">04</div>
+                        <div class="diff-icon"><i class="fas fa-comments"></i></div>
+                        <h3>Atendimento Direto & Ágil</h3>
+                        <p>Sem burocracias ou aberturas de tickets demoradas. Você conversa diretamente no WhatsApp com a equipe de desenvolvimento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Redesigned High-Converting Urgent CTA Banner -->
+        <section class="urgent-cta-section">
+            <div class="container">
+                <div class="urgent-cta-card reveal">
+                    <div class="urgent-glow-orb"></div>
+                    <div class="urgent-badge">
+                        <i class="fas fa-fire"></i>
+                        <span>Oportunidade para destacar sua marca</span>
+                    </div>
+
+                    <h2>Não deixe sua empresa invisível na internet.</h2>
+                    <p>
+                        Um site profissional não é custo — é o seu vendedor número 1 que trabalha 24 horas por dia. 
+                        Converse com a gente agora e receba um diagnóstico sem compromisso.
+                    </p>
+
+                    <div class="urgent-benefits">
+                        <div class="ub-item"><i class="fas fa-check-circle"></i> Orçamento gratuito em até 2h</div>
+                        <div class="ub-item"><i class="fas fa-check-circle"></i> Entrega ágil com cronograma</div>
+                        <div class="ub-item"><i class="fas fa-check-circle"></i> Condições flexíveis de pagamento</div>
+                    </div>
+
+                    <div class="urgent-btn-group">
+                        <a href="https://wa.me/5583998207363?text=Ol%C3%A1!%20Quero%20aproveitar%20para%20fazer%20um%20or%C3%A7amento%20do%20meu%20site." target="_blank" class="btn-urgent-main pulse-btn">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Fazer Orçamento Agora no WhatsApp</span>
+                        </a>
+                    </div>
+                    <span class="urgent-note"><i class="fas fa-clock"></i> Resposta rápida • Sem compromisso</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="depoimentos" class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag reveal"><i class="fas fa-heart"></i> Depoimentos</div>
+                    <h2 class="section-title reveal">O que nossos clientes dizem</h2>
+                    <p class="section-desc reveal">A confiança de quem já transformou sua presença digital com a Graviola.</p>
+                </div>
+
                 <div class="testimonials-grid">
-                    <div class="testimonial-card reveal">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="testimonial-text">"Contratamos a Graviola para reformular nossa identidade. O site ficou rápido, moderno, e a conversão subiu 40% no primeiro mês."</p>
-                        <div class="client-info">
-                            <div class="client-avatar">
-                                <i class="fas fa-user-circle"></i>
+                    <div class="testi-card reveal">
+                        <div class="testi-header">
+                            <div class="testi-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
-                            <div class="client-details">
+                            <span class="testi-badge">Verificado</span>
+                        </div>
+                        <p class="testi-comment">"Contratamos a Graviola para reformular nossa landing page. O site ficou incrivelmente rápido, com um design de encher os olhos. Nossa conversão de leads subiu mais de 40% no primeiro mês!"</p>
+                        <div class="testi-author">
+                            <div class="author-avatar"><i class="fas fa-user-tie"></i></div>
+                            <div class="author-info">
                                 <h4>Roberto Alencar</h4>
                                 <span>CEO, StartUp Vision</span>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-card reveal">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="testimonial-text">"A equipe entendeu bem o que precisávamos e entregou uma integração que funciona direito. O suporte depois da entrega também foi ótimo."</p>
-                        <div class="client-info">
-                            <div class="client-avatar">
-                                <i class="fas fa-user-circle"></i>
+
+                    <div class="testi-card reveal">
+                        <div class="testi-header">
+                            <div class="testi-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
-                            <div class="client-details">
+                            <span class="testi-badge">Verificado</span>
+                        </div>
+                        <p class="testi-comment">"O atendimento é impecável. Eles captaram a essência da empresa e entregaram muito além do que esperávamos. A facilidade de falar no WhatsApp e a agilidade nas revisões fizeram toda a diferença."</p>
+                        <div class="testi-author">
+                            <div class="author-avatar"><i class="fas fa-user-nurse"></i></div>
+                            <div class="author-info">
                                 <h4>Fernanda Costa</h4>
-                                <span>CTO, FinTech Solutions</span>
+                                <span>Diretora, FinTech Solutions</span>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-card reveal">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="testimonial-text">"O site ficou com uma cara séria e profissional. Isso fez diferença na hora de fechar novos contratos."
-                        </p>
-                        <div class="client-info">
-                            <div class="client-avatar">
-                                <i class="fas fa-user-circle"></i>
+
+                    <div class="testi-card reveal">
+                        <div class="testi-header">
+                            <div class="testi-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
-                            <div class="client-details">
+                            <span class="testi-badge">Verificado</span>
+                        </div>
+                        <p class="testi-comment">"Estávamos com vergonha de mandar o link do nosso site antigo para clientes. A Graviola redesenhou tudo com uma elegância absurda. Hoje apresentamos nossa proposta com orgulho."</p>
+                        <div class="testi-author">
+                            <div class="author-avatar"><i class="fas fa-user-shield"></i></div>
+                            <div class="author-info">
                                 <h4>Marcelo Vieira</h4>
                                 <span>Fundador, MV Consultoria</span>
                             </div>
@@ -236,67 +493,134 @@
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="sobre" class="about">
             <div class="container about-container">
                 <div class="about-text">
-                    <div class="tag reveal">Sobre nós</div>
-                    <h2 class="reveal">Sobre a <span>Agência Graviola</span></h2>
-                    <p class="reveal">Somos uma agência do nordeste focada em criar sites que ajudam negócios a vender pela internet. Trabalhamos com design personalizado, código limpo e atenção ao que o cliente precisa de verdade.</p>
-                    <ul class="about-points">
-                        <li class="reveal"><i class="fas fa-check-circle"></i> <span>Design Exclusivo e
-                                Personalizado</span></li>
-                        <li class="reveal"><i class="fas fa-check-circle"></i> <span>Foco Total na Conversão de
-                                Vendas</span></li>
-                        <li class="reveal"><i class="fas fa-check-circle"></i> <span>Tecnologia de Ponta do
-                                Mercado</span></li>
-                        <li class="reveal"><i class="fas fa-check-circle"></i> <span>Animações e Motion Design
-                                Profissionais</span></li>
-                    </ul>
+                    <div class="section-tag reveal"><i class="fas fa-seedling"></i> Nossa História</div>
+                    <h2 class="section-title reveal">Agência Graviola: <span class="gradient-text">DNA Nordestino, Tecnologia Global</span></h2>
+                    <p class="reveal">
+                        Nascemos na Paraíba com o propósito de provar que o Nordeste produz design e tecnologia de nível mundial. 
+                        A fruta graviola representa nossa identidade: casca forte, sabor marcante e autenticidade.
+                    </p>
+                    <p class="reveal">
+                        Tratamos cada projeto como se fosse nosso próprio negócio. Sem fórmulas mágicas ou promessas vazias — apenas técnica apurada, respeito ao prazo e paixão pelo que fazemos.
+                    </p>
+
+                    <div class="about-stats-grid reveal">
+                        <div class="ab-stat-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Campina Grande - PB</strong>
+                                <span>Atendendo clientes em todo o país</span>
+                            </div>
+                        </div>
+                        <div class="ab-stat-item">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <strong>Código Limpo & Rápido</strong>
+                                <span>Sem templates pesados</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-illustration">
-                    <div class="glass-box reveal">
-                        <div class="box-content">
-                            <h4><i class="fas fa-code"></i> Desenvolvimento</h4>
-                            <p>Sites rápidos, bem feitos e pensados para funcionar no celular e no desktop.
-                            </p>
+
+                <div class="about-visual reveal">
+                    <div class="about-card-stack">
+                        <div class="about-card-base">
+                            <div class="ac-icon"><i class="fas fa-gem"></i></div>
+                            <h3>Compromisso Graviola</h3>
+                            <p>Se o seu site não te deixar 100% orgulhoso e pronto para vender, nós ajustamos até ficar perfeito.</p>
+                            <div class="ac-tags">
+                                <span>#NordesteCriativo</span>
+                                <span>#AltaPerformance</span>
+                                <span>#FocoEmVendas</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contato" class="cta-section">
-            <div class="cta-bg-elements">
-                <div class="cta-glow glow-1"></div>
-                <div class="cta-glow glow-2"></div>
-                <div class="cta-glow glow-3"></div>
-            </div>
+        <!-- Final CTA Banner -->
+        <section class="final-cta">
             <div class="container">
-                <div class="cta-card glass reveal">
-                    <h2>Vamos fazer seu projeto?</h2>
-                    <p>Manda uma mensagem pelo WhatsApp e a gente responde rápido.</p>
-                    <a href="https://wa.me/5583998207363" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Falar pelo WhatsApp</a>
+                <div class="final-cta-card reveal">
+                    <h2>Preparado para dar o próximo passo?</h2>
+                    <p>Envie uma mensagem agora e vamos conversar sobre as ideias para o seu novo site.</p>
+                    <a href="https://wa.me/5583998207363?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20meu%20novo%20site%20com%20a%20Graviola." target="_blank" class="btn-whatsapp-large">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Iniciar Conversa no WhatsApp</span>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">Agência <span>Graviola</span></div>
-                <p>&copy; 2026 Agência Graviola. Todos os direitos reservados.</p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/agenciagraviolaoficial/" target="_blank"
-                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/5583998207363" target="_blank" aria-label="WhatsApp"><i
-                            class="fab fa-whatsapp"></i></a>
-                    <a href="https://tiktok.com/@graviolaagencia" target="_blank" aria-label="TikTok"><i
-                            class="fab fa-tiktok"></i></a>
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/logoGraviolaEscura.png" alt="Graviola" class="footer-logo-img" id="footerLogo">
+                        <span>Graviola</span>
+                    </div>
+                    <p>Agência digital focada em sites de alta performance, landing pages e posicionamento de marca na internet.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.instagram.com/agenciagraviolaoficial/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5583998207363" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://tiktok.com/@graviolaagencia" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
                 </div>
+
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#cases">Cases</a></li>
+                        <li><a href="#diferenciais">Diferenciais</a></li>
+                        <li><a href="#depoimentos">Depoimentos</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#servicos">Landing Pages</a></li>
+                        <li><a href="#servicos">Sites Institucionais</a></li>
+                        <li><a href="#servicos">Páginas de Cursos</a></li>
+                        <li><a href="#servicos">Redesign & Velocidade</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Campina Grande, Paraíba</p>
+                    <p><i class="fab fa-whatsapp"></i> (83) 99820-7363</p>
+                    <p><i class="fas fa-envelope"></i> contato@agenciagraviola.online</p>
+                    <div class="footer-status-pill">
+                        <span class="live-dot"></span>
+                        <span>Disponível para novos projetos</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Agência Graviola. Todos os direitos reservados.</p>
+                <p class="footer-note">Feito com cuidado e dedicação no Nordeste brasileiro.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Widget -->
+    <a href="https://wa.me/5583998207363?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Graviola%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" class="floating-whatsapp" aria-label="Falar pelo WhatsApp" title="Falar no WhatsApp">
+        <div class="f-pulse"></div>
+        <i class="fab fa-whatsapp"></i>
+        <span class="floating-tooltip">Fale com nossa equipe online!</span>
+    </a>
 
     <script src="script.js"></script>
 </body>
